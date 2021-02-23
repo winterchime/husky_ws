@@ -1,5 +1,9 @@
 # husky_ws
 
-so far i launch $roslaunch husky_gazebo husky_playpen.launch
+open husky_ws and launch gazebo, 
 
-in a new terminal i $rosrun husky_control sensorlistenerlidar.py
+$roslaunch husky_gazebo husky_playpen.launch
+
+in a new terminal i use the command below for obstacle avoidance algorithm node, 
+
+$rosrun husky_control sensorlistenerlidar.py
