@@ -1,28 +1,5 @@
 <?xml version="1.0"?>
-<!--
-Software License Agreement (BSD)
 
-\file      husky.urdf.xacro
-\authors   Paul Bovbel <pbovbel@clearpathrobotics.com>, Devon Ash <dash@clearpathrobotics.com>
-\copyright Copyright (c) 2015, Clearpath Robotics, Inc., All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that
-the following conditions are met:
- * Redistributions of source code must retain the above copyright notice, this list of conditions and the
-   following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
-   following disclaimer in the documentation and/or other materials provided with the distribution.
- * Neither the name of Clearpath Robotics nor the names of its contributors may be used to endorse or promote
-   products derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WAR-
-RANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, IN-
-DIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
-OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
 <robot name="husky" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:arg name="laser_enabled" default="false" />
@@ -51,9 +28,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <xacro:property name="M_PI" value="3.14159"/>
 
   <!-- Base Size -->
-  <xacro:property name="base_x_size" value="0.98740000" />
-  <xacro:property name="base_y_size" value="0.57090000" />
-  <xacro:property name="base_z_size" value="0.24750000" />
+  <xacro:property name="base_x_size" value="0.75" />
+  <xacro:property name="base_y_size" value="0.4" />
+  <xacro:property name="base_z_size" value="0.5" />
 
   <!-- Wheel Mounting Positions -->
   <xacro:property name="wheelbase" value="0.5120" />
@@ -67,10 +44,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <!-- Base link is the center of the robot's bottom plate -->
   <link name="base_link">
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://husky_description/meshes/base_link.dae" />
+        <box size="${ base_x_size} ${base_y_size} ${base_z_size}"/>
       </geometry>
+	  <material name="yellow"/>
     </visual>
     <collision>
       <origin xyz="${( husky_front_bumper_extend - husky_rear_bumper_extend ) / 2.0} 0 ${base_z_size/4}" rpy="0 0 0" />
@@ -79,12 +57,16 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
       </geometry>
     </collision>
     <collision>
-      <origin xyz="0 0 ${base_z_size*3/4-0.01}" rpy="0 0 0" />
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
       <geometry>
         <box size="${base_x_size*4/5} ${base_y_size} ${base_z_size/2-0.02}"/>
       </geometry>
     </collision>
   </link>
+  
+  <gazebo reference="base_link">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
 
   <!-- Base footprint is on the ground under the robot -->
   <link name="base_footprint"/>
@@ -198,7 +180,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
 <joint name="laser_joint" type="fixed">
 <axis xyz="0 0 0" />
-<origin xyz="0.425 0 0.35" rpy="0 0 0"/>
+<origin xyz="0.35 0 0.48" rpy="0 0 0"/>
 <parent link="base_link"/>
 <child link="laser_link"/>
 </joint>
@@ -230,6 +212,69 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 		</plugin>
 	</sensor>
 </gazebo>
+
+  <!-- Camera-->
+    <link name="camera">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <inertial>
+      <mass value="0.05" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.42 0 0.39" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera"/>
+  </joint>
+  
+    <gazebo reference="camera">
+    <material>Gazebo/Green</material>
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>kernel/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
 
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">

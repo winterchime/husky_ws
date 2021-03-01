@@ -19,6 +19,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "husky_description/catkin_generated/package.cmake"
   "husky_gazebo/catkin_generated/ordered_paths.cmake"
   "husky_gazebo/catkin_generated/package.cmake"
+  "husky_navigation/catkin_generated/ordered_paths.cmake"
+  "husky_navigation/catkin_generated/package.cmake"
   "husky_rviz/catkin_generated/ordered_paths.cmake"
   "husky_rviz/catkin_generated/package.cmake"
   "/home/mitto90/husky_ws/src/CMakeLists.txt"
@@ -28,6 +30,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/mitto90/husky_ws/src/husky_description/package.xml"
   "/home/mitto90/husky_ws/src/husky_gazebo/CMakeLists.txt"
   "/home/mitto90/husky_ws/src/husky_gazebo/package.xml"
+  "/home/mitto90/husky_ws/src/husky_navigation/CMakeLists.txt"
+  "/home/mitto90/husky_ws/src/husky_navigation/package.xml"
   "/home/mitto90/husky_ws/src/husky_rviz/CMakeLists.txt"
   "/home/mitto90/husky_ws/src/husky_rviz/package.xml"
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
@@ -206,6 +210,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "husky_control/CMakeFiles/CMakeDirectoryInformation.cmake"
   "husky_gazebo/CMakeFiles/CMakeDirectoryInformation.cmake"
   "husky_rviz/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "husky_navigation/CMakeFiles/CMakeDirectoryInformation.cmake"
   "husky_description/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

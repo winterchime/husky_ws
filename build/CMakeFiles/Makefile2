@@ -953,6 +953,24 @@ husky_rviz/preinstall:
 .PHONY : husky_rviz/preinstall
 
 #=============================================================================
+# Directory level rules for directory husky_navigation
+
+# Convenience name for "all" pass in the directory.
+husky_navigation/all:
+
+.PHONY : husky_navigation/all
+
+# Convenience name for "clean" pass in the directory.
+husky_navigation/clean:
+
+.PHONY : husky_navigation/clean
+
+# Convenience name for "preinstall" pass in the directory.
+husky_navigation/preinstall:
+
+.PHONY : husky_navigation/preinstall
+
+#=============================================================================
 # Directory level rules for directory husky_description
 
 # Convenience name for "all" pass in the directory.

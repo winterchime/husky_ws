@@ -1,2 +1,2 @@
-husky_control:husky_description:husky_gazebo:husky_rviz
+husky_control:husky_description:husky_gazebo:husky_navigation:husky_rviz
 -DCATKIN_DEVEL_PREFIX=/home/mitto90/husky_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mitto90/husky_ws/install -G Unix Makefiles

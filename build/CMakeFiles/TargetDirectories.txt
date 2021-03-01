@@ -71,6 +71,13 @@
 /home/mitto90/husky_ws/build/husky_rviz/CMakeFiles/install/local.dir
 /home/mitto90/husky_ws/build/husky_rviz/CMakeFiles/rebuild_cache.dir
 /home/mitto90/husky_ws/build/husky_rviz/CMakeFiles/install.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/install/strip.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/edit_cache.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/list_install_components.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/test.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/install/local.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/rebuild_cache.dir
+/home/mitto90/husky_ws/build/husky_navigation/CMakeFiles/install.dir
 /home/mitto90/husky_ws/build/husky_description/CMakeFiles/install/strip.dir
 /home/mitto90/husky_ws/build/husky_description/CMakeFiles/install/local.dir
 /home/mitto90/husky_ws/build/husky_description/CMakeFiles/test.dir
