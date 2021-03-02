@@ -13,7 +13,7 @@
     <param name="ymax" value="20"/>
     <remap from="scan" to="kernel/scan"/>
     <param name="base_frame" value="base_link" />
-    <rosparam command="load" file="$(find navigation)/config/gmapping_params.yaml" />
+    <rosparam command="load" file="$(find husky_navigation)/config/gmapping_params.yaml" />
   </node>
 
 

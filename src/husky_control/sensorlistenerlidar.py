@@ -9,7 +9,7 @@ from itertools import *
 from operator import itemgetter
 
 linear_speed = 0.0 #Always forward linear velocity.
-thresh_distance = 1.5 #THRESHOLD value for laser scan.
+thresh_distance = 2.0 #THRESHOLD value for laser scan.
 PI = 3.1415
 Kp = 0.05
 angular_speed = 0
