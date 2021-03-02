@@ -16,5 +16,7 @@
     <rosparam command="load" file="$(find husky_navigation)/config/gmapping_params.yaml" />
   </node>
 
-
+	<!--- Run Move Base -->
+  <include file="$(find husky_navigation)/launch/move_base.launch" />
+  
 </launch>
