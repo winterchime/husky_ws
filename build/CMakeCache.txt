@@ -373,6 +373,12 @@ husky_navigation_BINARY_DIR:STATIC=/home/mitto90/husky_ws/build/husky_navigation
 husky_navigation_SOURCE_DIR:STATIC=/home/mitto90/husky_ws/src/husky_navigation
 
 //Value Computed by CMake
+husky_opencv_BINARY_DIR:STATIC=/home/mitto90/husky_ws/build/husky_opencv
+
+//Value Computed by CMake
+husky_opencv_SOURCE_DIR:STATIC=/home/mitto90/husky_ws/src/husky_opencv
+
+//Value Computed by CMake
 husky_rviz_BINARY_DIR:STATIC=/home/mitto90/husky_ws/build/husky_rviz
 
 //Value Computed by CMake
@@ -545,7 +551,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1,0 +1,8 @@
+
+rostopic pub /cmd_vel geometry_msgs/Twist
+
+rosrun image_view image_view image:=/kernel/camera1/image_raw
+
+rosrun map_server map_saver -f 'file'
+
+

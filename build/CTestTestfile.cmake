@@ -7,6 +7,7 @@
 subdirs("gtest")
 subdirs("husky_control")
 subdirs("husky_gazebo")
+subdirs("husky_opencv")
 subdirs("husky_rviz")
 subdirs("husky_navigation")
 subdirs("husky_description")

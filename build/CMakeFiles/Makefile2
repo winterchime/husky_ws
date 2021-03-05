@@ -935,6 +935,24 @@ husky_gazebo/preinstall:
 .PHONY : husky_gazebo/preinstall
 
 #=============================================================================
+# Directory level rules for directory husky_opencv
+
+# Convenience name for "all" pass in the directory.
+husky_opencv/all:
+
+.PHONY : husky_opencv/all
+
+# Convenience name for "clean" pass in the directory.
+husky_opencv/clean:
+
+.PHONY : husky_opencv/clean
+
+# Convenience name for "preinstall" pass in the directory.
+husky_opencv/preinstall:
+
+.PHONY : husky_opencv/preinstall
+
+#=============================================================================
 # Directory level rules for directory husky_rviz
 
 # Convenience name for "all" pass in the directory.
