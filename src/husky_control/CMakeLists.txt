@@ -10,6 +10,7 @@ project(husky_control)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -203,3 +204,29 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+add_executable(teleop_twist_keyboard teleop_twist_keyboard.cpp)
+target_link_libraries(teleop_twist_keyboard ${catkin_LIBRARIES})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
