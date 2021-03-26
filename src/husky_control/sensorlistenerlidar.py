@@ -9,7 +9,7 @@ from itertools import *
 from operator import itemgetter
 
 linear_speed = 0.0 #Always forward linear velocity.
-thresh_distance = 2.0 #THRESHOLD value for laser scan.
+thresh_distance = 3.0 #THRESHOLD value for laser scan.
 PI = 3.1415
 Kp = 0.05
 angular_speed = 0
@@ -39,7 +39,7 @@ def LaserScanProcess(data):
     if average_gap < max_gap:
         angular_speed = -0.5
     else:
-        linear_speed = 0.3
+        linear_speed = 1.0
         angular_speed = Kp*(-1)*(90 - turn_angle)
 
 def main():

@@ -6,12 +6,13 @@
   
   <!--- Run gmapping -->
   <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen">
-    <param name="delta" value="0.01"/>
-    <param name="xmin" value="-20"/>
-    <param name="xmax" value="20"/>
-    <param name="ymin" value="-20"/>
-    <param name="ymax" value="20"/>
+    <param name="delta" value="0.1"/>
+    <param name="xmin" value="-100"/>
+    <param name="xmax" value="100"/>
+    <param name="ymin" value="-100"/>
+    <param name="ymax" value="100"/>
     <remap from="scan" to="kernel/scan"/>
+	<remap from="imu" to="imu/data"/>
     <param name="base_frame" value="base_link" />
     <rosparam command="load" file="$(find husky_navigation)/config/gmapping_params.yaml" />
   </node>
