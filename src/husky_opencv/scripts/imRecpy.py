@@ -1,5 +1,7 @@
 import cv2 
 import numpy as np
+import rospy
+
 
 frameWidth  = 640
 frameHeight = 480
