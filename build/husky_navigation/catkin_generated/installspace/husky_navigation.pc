@@ -1,4 +1,4 @@
-prefix=/home/mitto90/husky_ws/install
+prefix=/home/irene/development/husky_ws/install
 
 Name: husky_navigation
 Description: Description of husky_navigation

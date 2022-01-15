@@ -1,8 +1,8 @@
-# Install script for directory: /home/mitto90/husky_ws/src/husky_gazebo
+# Install script for directory: /home/irene/development/husky_ws/src/husky_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mitto90/husky_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/irene/development/husky_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mitto90/husky_ws/build/husky_gazebo/catkin_generated/installspace/husky_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/irene/development/husky_ws/build/husky_gazebo/catkin_generated/installspace/husky_gazebo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_gazebo/cmake" TYPE FILE FILES
-    "/home/mitto90/husky_ws/build/husky_gazebo/catkin_generated/installspace/husky_gazeboConfig.cmake"
-    "/home/mitto90/husky_ws/build/husky_gazebo/catkin_generated/installspace/husky_gazeboConfig-version.cmake"
+    "/home/irene/development/husky_ws/build/husky_gazebo/catkin_generated/installspace/husky_gazeboConfig.cmake"
+    "/home/irene/development/husky_ws/build/husky_gazebo/catkin_generated/installspace/husky_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_gazebo" TYPE FILE FILES "/home/mitto90/husky_ws/src/husky_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_gazebo" TYPE FILE FILES "/home/irene/development/husky_ws/src/husky_gazebo/package.xml")
 endif()
 

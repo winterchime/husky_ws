@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/mitto90/husky_ws/build'
+export PWD='/home/irene/development/husky_ws/build'

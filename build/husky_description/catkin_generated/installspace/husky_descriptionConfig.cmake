@@ -67,14 +67,14 @@ set(husky_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(husky_description_SOURCE_PREFIX /home/mitto90/husky_ws/src/husky_description)
-  set(husky_description_DEVEL_PREFIX /home/mitto90/husky_ws/devel)
+  set(husky_description_SOURCE_PREFIX /home/irene/development/husky_ws/src/husky_description)
+  set(husky_description_DEVEL_PREFIX /home/irene/development/husky_ws/devel)
   set(husky_description_INSTALL_PREFIX "")
   set(husky_description_PREFIX ${husky_description_DEVEL_PREFIX})
 else()
   set(husky_description_SOURCE_PREFIX "")
   set(husky_description_DEVEL_PREFIX "")
-  set(husky_description_INSTALL_PREFIX /home/mitto90/husky_ws/install)
+  set(husky_description_INSTALL_PREFIX /home/irene/development/husky_ws/install)
   set(husky_description_PREFIX ${husky_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mitto90/husky_ws/install/lib;/home/mitto90/husky_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/irene/development/husky_ws/install/lib;/home/irene/development/husky_ws/devel/lib;/home/irene/development/bud_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

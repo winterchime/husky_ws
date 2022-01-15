@@ -1,8 +1,8 @@
-# Install script for directory: /home/mitto90/husky_ws/src/husky_control
+# Install script for directory: /home/irene/development/husky_ws/src/husky_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mitto90/husky_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/irene/development/husky_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mitto90/husky_ws/build/husky_control/catkin_generated/installspace/husky_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/irene/development/husky_ws/build/husky_control/catkin_generated/installspace/husky_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_control/cmake" TYPE FILE FILES
-    "/home/mitto90/husky_ws/build/husky_control/catkin_generated/installspace/husky_controlConfig.cmake"
-    "/home/mitto90/husky_ws/build/husky_control/catkin_generated/installspace/husky_controlConfig-version.cmake"
+    "/home/irene/development/husky_ws/build/husky_control/catkin_generated/installspace/husky_controlConfig.cmake"
+    "/home/irene/development/husky_ws/build/husky_control/catkin_generated/installspace/husky_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_control" TYPE FILE FILES "/home/mitto90/husky_ws/src/husky_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_control" TYPE FILE FILES "/home/irene/development/husky_ws/src/husky_control/package.xml")
 endif()
 

@@ -1,8 +1,0 @@
-prefix=/home/mitto90/husky_ws/install
-
-Name: husky_opencv
-Description: Description of husky_opencv
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
