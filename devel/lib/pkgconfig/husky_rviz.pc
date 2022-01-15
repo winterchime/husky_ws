@@ -1,8 +1,0 @@
-prefix=/home/irene/development/husky_ws/devel
-
-Name: husky_rviz
-Description: Description of husky_rviz
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

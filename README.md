@@ -1,28 +1,43 @@
 # husky_ws
 
-For obstacle avoidance only 
-open husky_ws and launch gazebo, 
-$cd husky_ws
-$roslaunch husky_gazebo husky_maze.launch
+Obstacle Avoidance Only 
+# open husky_ws and launch gazebo 
+```bash
+cd husky_ws
+```
+```bash
+roslaunch husky_gazebo husky_maze.launch
+```
 
-in a new terminal i use the command below for obstacle avoidance algorithm node, 
+Obstacle Avoidance Algorithm Node 
 
-$rosrun husky_control sensorlistenerlidar.py
+```bash
+rosrun husky_control sensorlistenerlidar.py
+```
 
+Navigation
 
-For the Navigation portion,
+Shell #1
+```bash
+cd husky_ws
+```
+```bash
+roslaunch husky_gazebo husky_maze.launch
+```
 
-$cd husky_ws
+Shell #2
+```bash
+cd husky_ws
+```
+```bash
+roslaunch husky_navigation amcl_demo.launch
+```
 
-$roslaunch husky_gazebo husky_maze.launch
-
-in a new terminal, launch amcl launch file
-$cd husky_ws
-$roslaunch husky_navigation amcl_demo.launch
-
-new terminal launch rviz file
-
-$cd husky_ws
-$roslaunch husky_rviz rviz.launch
-
+Shell #3
+```bash
+cd husky_ws
+```
+```bash
+roslaunch husky_rviz rviz.launch
+```
 

@@ -1,2 +1,0 @@
-husky_control:husky_description:husky_gazebo:husky_navigation:husky_rviz
--DCATKIN_DEVEL_PREFIX=/home/irene/development/husky_ws/devel -DCMAKE_INSTALL_PREFIX=/home/irene/development/husky_ws/install -G Unix Makefiles
